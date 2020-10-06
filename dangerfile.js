@@ -3,7 +3,7 @@ const { stripIndent, stripIndents } = require('common-tags');
 
 function handleMultipleFileChanges(gitChanges) {
   fail(
-    'This PR requires a manual review because you are changing more files than just `_data/pixels.json`.'
+    'This PR requiressss a manual review because you are changing more files than just `_data/pixels.json`.'
   );
   markdown(stripIndent`
     ## FAQ
@@ -114,8 +114,8 @@ async function evaluatePixelChanges(jsonPatch) {
 
     These are the pixels at the following locations for the GitHub username "${gitHubUsername}" in the pixels.json file:
     ${pixelsWithGitHubUsername
-      .map(pixel => `{ x: ${pixel.x}, y: ${pixel.y} }`)
-      .join('\n')}
+        .map(pixel => `{ x: ${pixel.x}, y: ${pixel.y} }`)
+        .join('\n')}
     `);
     return false;
   }
